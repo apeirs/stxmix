@@ -1,0 +1,59 @@
+# 2026-11-07T08:07:32Z unmodified curl against stxmix serve (gateway log: live-gateway.log)
+
+$ curl -s --max-time 120 http://127.0.0.1:3999/v2/info | python3 -c 'import json,sys; d=json.load(sys.stdin); print(d["network_id"], d["stacks_tip_height"], d["burn_block_height"], d["server_version"])'
+1 9434189 974905 stacks-node 4.0.4 (10474cd, release build, linux [x86_64])
+(wall time 3.3 s)
+
+$ curl -s --max-time 120 http://127.0.0.1:3999/extended
+{"server_version":"stacks-blockchain-api v9.8.0 (HEAD:3089986)","status":"ready","chain_tip":{"block_height":9434189,"block_hash":"0xebba2e4085b2927518281b4983969962031efda236c1fdfee796ea1c78fb3710","index_block_hash":"0x96f97285ff1128e62964aa5aed2731b75b4d7c83d6ec5f98be968cdca13a4ef3","burn_block_height":974905}}
+(wall time 1.0 s)
+
+$ curl -s --max-time 120 'http://127.0.0.1:3999/v2/accounts/SP000000000000000000002Q6VF78?proof=0'
+{"balance":"0x000000000000000000000000bd57efdf","locked":"0x00000000000000000000000000000000","unlock_height":0,"nonce":0}
+(wall time 1.4 s)
+
+$ curl -s --max-time 120 http://127.0.0.1:3999/extended/v2/addresses/SM3VDXK3WZZSA84XXFKAFAF15NNZX32CTSG82JFQ4/balances/stx
+{"balance":"1965379994","total_miner_rewards_received":"0","lock_tx_id":"","locked":"0","lock_height":0,"burnchain_lock_height":0,"burnchain_unlock_height":0}
+(wall time 1.3 s)
+
+$ curl -s --max-time 120 -X POST -H 'Content-Type: application/json' -d '{"sender":"SM3VDXK3WZZSA84XXFKAFAF15NNZX32CTSG82JFQ4","arguments":[]}' http://127.0.0.1:3999/v2/contracts/call-read/SM3VDXK3WZZSA84XXFKAFAF15NNZX32CTSG82JFQ4/sbtc-token/get-total-supply
+{"okay":true,"result":"0x0701000000000000000000000039c9167768"}
+(wall time 1.2 s)
+
+$ curl -s --max-time 120 http://127.0.0.1:3999/v2/fees/transfer
+1
+(wall time 1.0 s)
+
+$ echo 0000000001deadbeefdeadbeefdeadbeef00 | xxd -r -p | curl -s --max-time 120 -w '\n-> HTTP %{http_code}' -X POST -H 'Content-Type: application/octet-stream' --data-binary @- http://127.0.0.1:3999/v2/transactions   # junk bytes: rejected by the node
+Failed to decode: Failed to deserialize posted transaction: Failed to parse transaction authorization: unrecognized auth flags 222
+-> HTTP 400
+(wall time 1.1 s)
+
+$ curl -s --max-time 120 'http://127.0.0.1:3999/extended/v2/blocks?limit=1' | python3 -c 'import json,sys; b=json.load(sys.stdin)["results"][0]; print(b["height"], b["block_time_iso"], b["tx_count"], "txs")'
+9434190 2026-11-07T08:07:32.000Z 1 txs
+(wall time 2.8 s)
+
+$ curl -s --max-time 120 http://127.0.0.1:3999/testnet/v2/info | python3 -c 'import json,sys; d=json.load(sys.stdin); print(d["network_id"], d["stacks_tip_height"])'   # testnet on the same port
+2147483648 950264
+(wall time 2.0 s)
+
+$ curl -s --max-time 120 http://127.0.0.1:3998/extended   # testnet at the root of --testnet-listen
+{"server_version":"stacks-blockchain-api v9.8.0 (HEAD:3089986)","status":"ready","chain_tip":{"block_height":950264,"block_hash":"0x4671f2318e008e29f815068169557a2bea903933269aa79fa14eb7233af0ae36","index_block_hash":"0xc9aaa3492093f8f90b92699a480aaf8432d7c626414f21ccc90ec2c1eb88ba22","burn_block_height":35840}}
+(wall time 1.8 s)
+
+$ curl -s --max-time 120 -o /dev/null -w '%{http_code} %header{access-control-allow-origin}\n' -H 'Origin: chrome-extension://ldinpeekobnhjjdofggfgjlcehhmanlj' http://127.0.0.1:3999/v2/info   # Leather's extension origin is allowed
+200 chrome-extension://ldinpeekobnhjjdofggfgjlcehhmanlj
+(wall time 1.1 s)
+
+$ curl -s --max-time 30 -o /dev/null -w '%{http_code}\n' -H 'Host: evil.example' http://127.0.0.1:3999/v2/info   # DNS-rebinding guard
+403
+(wall time 0.0 s)
+
+$ curl -s --max-time 30 -o /dev/null -w '%{http_code}\n' -H 'Origin: https://evil.example' http://127.0.0.1:3999/v2/info   # web-page Origin guard
+403
+(wall time 0.0 s)
+
+$ curl -s --max-time 30 -o /dev/null -w '%{http_code}\n' -X OPTIONS -H 'Origin: https://evil.example' -H 'Access-Control-Request-Method: POST' http://127.0.0.1:3999/v2/transactions   # CORS preflight from a web page
+403
+(wall time 0.0 s)
+

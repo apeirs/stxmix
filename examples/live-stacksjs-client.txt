@@ -1,0 +1,13 @@
+# 2026-11-07T08:10:11Z @stacks/network 7.7.0 + @stacks/transactions 7.7.0, unmodified, against stxmix serve (Node v26.8.1)
+# An earlier run (08:08Z) called fetchFeeEstimateTransfer({ transaction: 180, network }) without client: stacks.js sent that one
+# request straight to api.mainnet.hiro.so (it never reached the gateway, see live-gateway.log). Fixed in the script by passing client: { baseUrl }.
+$ node stacksjs-client.mjs http://127.0.0.1:3999
+stacks.js network baseUrl = http://127.0.0.1:3999 (mainnet), http://127.0.0.1:3999/testnet (testnet)
+fetch(/v2/info) via network.client: network_id=1 stacks_tip_height=9434198  (1.3 s)
+fetchCallReadOnlyFunction sbtc-token.get-total-supply: (ok u248186828648)  (1.2 s)
+fetchCallReadOnlyFunction sbtc-token.get-balance: (ok u129)  (1.1 s)
+fetchAbi sbtc-token: 8 read-only functions, e.g. get-balance, get-balance-available, get-balance-locked  (1.1 s)
+fetchNonce SP000000000000000000002Q6VF78: 1  (1.4 s)
+fetchFeeEstimateTransfer (180 bytes, µSTX): 180  (1.3 s)
+testnet fetchNonce ST000000000000000000002AMW42H: 1  (1.3 s)
+broadcastTransaction(junk bytes): ERROR Failed to broadcast transaction (unable to parse node response). / Unexpected token 'F', "Failed to "... is not valid JSON  (2.9 s)

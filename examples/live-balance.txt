@@ -1,0 +1,36 @@
+# 2026-11-07T08:03:01Z over the real Nym mainnet mixnet: public addresses only (the boot-contract deployer and the sBTC deployer)
+$ stxmix balance SP000000000000000000002Q6VF78
+SP000000000000000000002Q6VF78 on mainnet (via api.hiro.so over the mixnet):
+  3176.656863 STX (locked 0 STX), nonce 0
+  10000 SM16JGWSY1TVR0PE6HV5RVT4JFC10E4WQH43HB8Z1.dlmm-pool-test-v-1-1::pool-token (base units)
+  292000 SM1FKXGNZJWSTWDWXQZJNF7B5TV5ZB235JTCXYXKD.dlmm-pool-aeusdc-usdcx-v-1-bps-1::pool-token (base units)
+  986000 SM1FKXGNZJWSTWDWXQZJNF7B5TV5ZB235JTCXYXKD.dlmm-pool-leo-stx-v-1-bps-50::pool-token (base units)
+  1001000 SM1FKXGNZJWSTWDWXQZJNF7B5TV5ZB235JTCXYXKD.dlmm-pool-sbtc-usdcx-v-1-bps-10::pool-token (base units)
+  370000 SM1FKXGNZJWSTWDWXQZJNF7B5TV5ZB235JTCXYXKD.dlmm-pool-sbtc-usdcx-v-1-bps-1::pool-token (base units)
+  ... and 460 more tokens (--all or --json to list them)
+(wall time 11.6 s, exit 0)
+
+$ stxmix balance SM3VDXK3WZZSA84XXFKAFAF15NNZX32CTSG82JFQ4
+SM3VDXK3WZZSA84XXFKAFAF15NNZX32CTSG82JFQ4 on mainnet (via api.hiro.so over the mixnet):
+  1965.379994 STX (locked 0 STX), nonce 3833
+  129 SM3VDXK3WZZSA84XXFKAFAF15NNZX32CTSG82JFQ4.sbtc-token::sbtc-token (base units)
+  999000000 SP14XEKF7G8Q4WFYBSE77XSDMM67GTVF95R4V680.pixelstacks::PXS (base units)
+  10000000 SP1T0VY3DNXRVP6HBM75DFWW0199CR0X15PC1D81B.teiko-token-stxcity::Teiko (base units)
+  154000 SP37WN2BYHKZ90T1ATHTCNG8EFYHS3B49KNGS02ZK.RALEX::rALEX (base units)
+(wall time 11.5 s, exit 0)
+
+$ stxmix balance ST000000000000000000002AMW42H --network testnet
+ST000000000000000000002AMW42H on testnet (via api.testnet.hiro.so over the mixnet):
+  7502.003012 STX (locked 0 STX), nonce 0
+  1000 ST15QBCQ1HPM2TXX0NC5Q4QVWWZPNCSEAVAPWMRR.dlmm-pool-sbtc-usdcx-v-1-bps-10::pool-token (base units)
+  1000 ST15QBCQ1HPM2TXX0NC5Q4QVWWZPNCSEAVAPWMRR.dlmm-pool-sbtc-usdcx-v-1-bps-1::pool-token (base units)
+  1000 ST15QBCQ1HPM2TXX0NC5Q4QVWWZPNCSEAVAPWMRR.dlmm-pool-stx-sbtc-v-1-bps-15::pool-token (base units)
+  1000 ST15QBCQ1HPM2TXX0NC5Q4QVWWZPNCSEAVAPWMRR.dlmm-pool-stx-sbtc-v-2-bps-15::pool-token (base units)
+  1000 ST15QBCQ1HPM2TXX0NC5Q4QVWWZPNCSEAVAPWMRR.dlmm-pool-stx-usdcx-v-1-bps-10::pool-token (base units)
+  ... and 10 more tokens (--all or --json to list them)
+(wall time 11.2 s, exit 0)
+
+$ stxmix balance SP000000000000000000002Q6VF79
+stxmix: Stacks address checksum mismatch
+(wall time 0.0 s, exit 1)
+

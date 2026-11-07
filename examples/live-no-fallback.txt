@@ -1,0 +1,25 @@
+# 2026-11-07T08:11:38Z mixnet client unreachable (SOCKS5 pointed at a closed port): stxmix refuses, never connects directly
+$ stxmix balance SM3VDXK3WZZSA84XXFKAFAF15NNZX32CTSG82JFQ4 --proxy 127.0.0.1:1099
+stxmix: api.hiro.so: no SOCKS5 proxy (nym-socks5-client) listening; refusing to fall back to a direct connection (127.0.0.1:1099: dial tcp 127.0.0.1:1099: connect: connection refused)
+(exit code 1)
+
+$ stxmix broadcast junk-tx.hex --proxy 127.0.0.1:1099
+stxmix: api.hiro.so: no SOCKS5 proxy (nym-socks5-client) listening; refusing to fall back to a direct connection (127.0.0.1:1099: dial tcp 127.0.0.1:1099: connect: connection refused)
+(exit code 1)
+
+$ stxmix serve --listen 127.0.0.1:3997 --proxy 127.0.0.1:1099 &
+$ curl -s -w "\n-> HTTP %{http_code}\n" http://127.0.0.1:3997/v2/info
+{"error":"stxmix: all upstreams failed over the mixnet (no clearnet fallback): api.hiro.so: no SOCKS5 proxy (nym-socks5-client) listening; refusing to fall back to a direct connection (127.0.0.1:1099: dial tcp 127.0.0.1:1099: connect: connection refused)","reason":"MixnetUnavailable"}
+-> HTTP 502
+$ curl -s -w "\n-> HTTP %{http_code}\n" http://127.0.0.1:3997/extended/v1/address/SM3VDXK3WZZSA84XXFKAFAF15NNZX32CTSG82JFQ4/balances
+{"error":"stxmix: all upstreams failed over the mixnet (no clearnet fallback): api.hiro.so: no SOCKS5 proxy (nym-socks5-client) listening; refusing to fall back to a direct connection (127.0.0.1:1099: dial tcp 127.0.0.1:1099: connect: connection refused)","reason":"MixnetUnavailable"}
+-> HTTP 502
+$ curl -s -w "\n-> HTTP %{http_code}\n" -X POST -H "Content-Type: application/json" -d '{"sender":"SM3VDXK3WZZSA84XXFKAFAF15NNZX32CTSG82JFQ4","arguments":[]}' http://127.0.0.1:3997/v2/contracts/call-read/SM3VDXK3WZZSA84XXFKAFAF15NNZX32CTSG82JFQ4/sbtc-token/get-total-supply
+{"error":"stxmix: all upstreams failed over the mixnet (no clearnet fallback): api.hiro.so: no SOCKS5 proxy (nym-socks5-client) listening; refusing to fall back to a direct connection (127.0.0.1:1099: dial tcp 127.0.0.1:1099: connect: connection refused)","reason":"MixnetUnavailable"}
+-> HTTP 502
+
+# gateway log of that run (no address, contract or function name appears):
+09:11:38 stxmix gateway on http://127.0.0.1:3997  (root = mainnet; SOCKS5 127.0.0.1:1099; Hiro API key: none (keyless, Hiro's per-IP limits apply to the exit IP))
+09:11:39 mainnet GET /v2/info FAILED after 0.0s: api.hiro.so: no SOCKS5 proxy (nym-socks5-client) listening; refusing to fall back to a direct connection (127.0.0.1:1099: dial tcp 127.0.0.1:1099: connect: connection refused)
+09:11:39 mainnet GET /extended/v1/address/*/balances FAILED after 0.0s: api.hiro.so: no SOCKS5 proxy (nym-socks5-client) listening; refusing to fall back to a direct connection (127.0.0.1:1099: dial tcp 127.0.0.1:1099: connect: connection refused)
+09:11:39 mainnet POST /v2/contracts/call-read/*/*/* FAILED after 0.0s: api.hiro.so: no SOCKS5 proxy (nym-socks5-client) listening; refusing to fall back to a direct connection (127.0.0.1:1099: dial tcp 127.0.0.1:1099: connect: connection refused)

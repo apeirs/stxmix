@@ -1,0 +1,14 @@
+# 2026-11-07T08:05:32Z every built-in upstream through the real Nym mainnet mixnet (exit node 2439, CL), 4 at a time; each row = GET /v2/info then GET /extended on one fresh mixnet stream
+$ stxmix probe
+NETWORK  UPSTREAM                           NODE RPC /v2/info  TIME   HIRO API /extended  TIME
+mainnet  api.hiro.so                        tip 9434182        8.6s   ready, tip 9434183  1.3s
+mainnet  api.mainnet.hiro.so                tip 9434183        11.2s  ready, tip 9434183  1.5s
+mainnet  stacks-node-api.mainnet.stacks.co  tip 9434183        17.6s  ready, tip 9434183  3.3s
+testnet  api.testnet.hiro.so                tip 950250         7.5s   ready, tip 950250   3.1s
+4 of 4 upstreams answered /v2/info through the mixnet
+(wall time 21 s)
+
+$ stxmix probe --api https://stacks-node-api.testnet.stacks.co --network testnet   # the old testnet name, for the record
+NETWORK  UPSTREAM                           NODE RPC /v2/info                                       TIME  HIRO API /extended                                      TIME
+custom   stacks-node-api.testnet.stacks.co  FAIL HTTP 404 from stacks-node-api.testnet.stacks.co:   6.5s  FAIL HTTP 404 from stacks-node-api.testnet.stacks.co:   1.4s
+0 of 1 upstreams answered /v2/info through the mixnet

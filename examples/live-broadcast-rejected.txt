@@ -1,0 +1,28 @@
+# 2026-11-07T08:04:47Z junk 'transactions' (right version byte + chain id, then 13 junk bytes) over the real Nym mainnet mixnet; no real transaction is ever sent
+$ cat junk-tx.hex
+0x0000000001deadbeefdeadbeefdeadbeef00
+$ stxmix broadcast stxmix/examples/junk-tx.hex
+rejected by the node: HTTP 400 Failed to decode: Failed to deserialize posted transaction: Failed to parse transaction authorization: unrecognized auth flags 222 (via api.hiro.so over the mixnet)
+(wall time 6.0 s, exit 1)
+
+$ stxmix broadcast stxmix/examples/junk-tx.hex --json
+{
+  "error": "",
+  "message": "Failed to decode: Failed to deserialize posted transaction: Failed to parse transaction authorization: unrecognized auth flags 222",
+  "reason": "",
+  "reason_data": null,
+  "status": 400,
+  "txid": "",
+  "upstream": "https://api.hiro.so"
+}
+(wall time 7.4 s, exit 1)
+
+$ cat junk-tx-testnet.hex
+0x8080000000deadbeefdeadbeefdeadbeef00
+$ stxmix broadcast stxmix/examples/junk-tx-testnet.hex --network testnet
+rejected by the node: HTTP 400 Failed to decode: Failed to deserialize posted transaction: Failed to parse transaction authorization: unrecognized auth flags 222 (via api.testnet.hiro.so over the mixnet)
+(wall time 12.2 s, exit 1)
+
+$ echo 80800000000102 | stxmix broadcast -   # a testnet version byte on mainnet: refused locally, nothing sent
+stxmix: this transaction is not for mainnet (version byte 0x80, chain id 0x80000000); pass --network
+(exit 1)

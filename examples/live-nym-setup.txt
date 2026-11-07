@@ -1,0 +1,12 @@
+# 2026-11-07T08:01:49Z real Nym mainnet mixnet, nym-socks5-client (build 2026-10-01), client id stxmix, SOCKS5 127.0.0.1:1087
+$ stxmix nym setup
+exit gateway: node 2439 (CL) perf=0.98 version=1.43.0, picked at random from 99
+initialised "stxmix" -> C7Wx2Yiug1gCpfRLd6WYonHLT4dXx3nztiQ97qDPcPR7.AkgxEtBLgLYqwJHzHrSUasa93pTWZVPRyDtiFVncM6Xc@2EJk2oBtjq7Qik5V9Yxs8RXnBU9BhRLLj3biLCXksRWA
+id                 stxmix
+pid                533986
+socks5             127.0.0.1:1087
+provider           C7Wx2Yiug1gCpfRLd6WYonHLT4dXx3nztiQ97qDPcPR7.AkgxEtBLgLYqwJHzHrSUasa93pTWZVPRyDtiFVncM6Xc@2EJk2oBtjq7Qik5V9Yxs8RXnBU9BhRLLj3biLCXksRWA
+anonymous_replies  true
+client_address     2KSWggmLXSwcFi4bRyqDR5NbKrTqFhfKSnsaNYsKyFou.E89Xf18rcF2V7m8VoR7zWiVy2Nog1bJbL16dzB9nTeA3@5wF5wN7T2UuSsiUcQyL77NwdnXwAXxFttpZ1dR1nu4kR
+gateway            5wF5wN7T2UuSsiUcQyL77NwdnXwAXxFttpZ1dR1nu4kR
+log                ~/.local/state/stxmix/stxmix.log

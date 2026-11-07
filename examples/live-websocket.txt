@@ -1,0 +1,7 @@
+# 2026-11-07T08:10:34Z Hiro websocket (/extended/v1/ws) through stxmix serve, Node v26.8.1 built-in WebSocket
+$ node ws-client.mjs ws://127.0.0.1:3999/extended/v1/ws
+open ws://127.0.0.1:3999/extended/v1/ws after 5.1 s
+subscribed after 6.0 s: {}
+block 9434201 2026-11-07T08:10:49.000Z txs=1 after 21.8 s
+block 9434202 2026-11-07T08:11:16.000Z txs=1 after 50.0 s
+closed (1005) after 51.0 s

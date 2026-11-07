@@ -1,0 +1,70 @@
+09:06:22 stxmix gateway on http://127.0.0.1:3999  (root = mainnet; SOCKS5 127.0.0.1:1087; Hiro API key: none (keyless, Hiro's per-IP limits apply to the exit IP))
+09:06:22 stxmix gateway on http://127.0.0.1:3998  (root = testnet; SOCKS5 127.0.0.1:1087; Hiro API key: none (keyless, Hiro's per-IP limits apply to the exit IP))
+09:06:47 mainnet GET /v2/info -> mixnet -> api.hiro.so HTTP 200, 1089 bytes in 7.5s
+09:06:48 mainnet GET /extended -> mixnet -> api.hiro.so HTTP 200, 315 bytes in 1.1s
+09:06:51 mainnet GET /v2/accounts/* -> mixnet -> api.hiro.so HTTP 200, 122 bytes in 3.5s
+09:06:54 mainnet GET /extended/v2/addresses/*/balances/stx -> mixnet -> api.hiro.so HTTP 200, 158 bytes in 3.1s
+09:06:56 mainnet POST /v2/contracts/call-read/*/*/* -> mixnet -> api.hiro.so HTTP 200, 63 bytes in 1.4s
+09:06:58 mainnet GET /v2/fees/transfer -> mixnet -> api.hiro.so HTTP 200, 1 bytes in 1.6s
+09:06:59 mainnet POST /v2/transactions -> mixnet -> api.hiro.so HTTP 400, 130 bytes in 1.0s
+09:07:02 mainnet GET /extended/v2/blocks -> mixnet -> api.hiro.so HTTP 200, 1143 bytes in 3.2s
+09:07:12 testnet GET /v2/info -> mixnet -> api.testnet.hiro.so HTTP 200, 2283 bytes in 10.1s
+09:07:13 testnet GET /extended -> mixnet -> api.testnet.hiro.so HTTP 200, 313 bytes in 1.3s
+09:07:15 mainnet GET /v2/info -> mixnet -> api.hiro.so HTTP 200, 1089 bytes in 1.2s
+09:07:36 mainnet GET /v2/info -> mixnet -> api.hiro.so HTTP 200, 1089 bytes in 3.3s
+09:07:37 mainnet GET /extended -> mixnet -> api.hiro.so HTTP 200, 315 bytes in 1.0s
+09:07:38 mainnet GET /v2/accounts/* -> mixnet -> api.hiro.so HTTP 200, 122 bytes in 1.4s
+09:07:39 mainnet GET /extended/v2/addresses/*/balances/stx -> mixnet -> api.hiro.so HTTP 200, 158 bytes in 1.3s
+09:07:41 mainnet POST /v2/contracts/call-read/*/*/* -> mixnet -> api.hiro.so HTTP 200, 63 bytes in 1.1s
+09:07:42 mainnet GET /v2/fees/transfer -> mixnet -> api.hiro.so HTTP 200, 1 bytes in 1.0s
+09:07:43 mainnet POST /v2/transactions -> mixnet -> api.hiro.so HTTP 400, 130 bytes in 1.0s
+09:07:45 mainnet GET /extended/v2/blocks -> mixnet -> api.hiro.so HTTP 200, 1143 bytes in 2.8s
+09:07:47 testnet GET /v2/info -> mixnet -> api.testnet.hiro.so HTTP 200, 2283 bytes in 2.0s
+09:07:49 testnet GET /extended -> mixnet -> api.testnet.hiro.so HTTP 200, 313 bytes in 1.8s
+09:07:50 mainnet GET /v2/info -> mixnet -> api.hiro.so HTTP 200, 1089 bytes in 1.1s
+09:08:30 mainnet GET /v2/info -> mixnet -> api.hiro.so HTTP 200, 1089 bytes in 1.1s
+09:08:33 mainnet POST /v2/contracts/call-read/*/*/* -> mixnet -> api.hiro.so HTTP 200, 63 bytes in 2.8s
+09:08:34 mainnet POST /v2/contracts/call-read/*/*/* -> mixnet -> api.hiro.so HTTP 200, 63 bytes in 1.3s
+09:08:37 mainnet GET /v2/contracts/interface/*/* -> mixnet -> api.hiro.so HTTP 200, 5446 bytes in 3.1s
+09:08:39 mainnet GET /extended/v3/*/*/nonces -> mixnet -> api.hiro.so HTTP 200, 111 bytes in 1.5s
+09:08:41 testnet GET /extended/v3/*/*/nonces -> mixnet -> api.testnet.hiro.so HTTP 200, 111 bytes in 2.0s
+09:08:43 mainnet POST /v2/transactions -> mixnet -> api.hiro.so HTTP 400, 130 bytes in 1.6s
+09:09:31 stxmix gateway on http://127.0.0.1:3999  (root = mainnet; SOCKS5 127.0.0.1:1087; Hiro API key: none (keyless, Hiro's per-IP limits apply to the exit IP))
+09:09:31 stxmix gateway on http://127.0.0.1:3998  (root = testnet; SOCKS5 127.0.0.1:1087; Hiro API key: none (keyless, Hiro's per-IP limits apply to the exit IP))
+09:09:48 mainnet GET /v2/info -> mixnet -> api.hiro.so HTTP 200, 1089 bytes in 10.5s
+09:09:49 mainnet POST /v2/contracts/call-read/*/*/* -> mixnet -> api.hiro.so HTTP 200, 63 bytes in 1.3s
+09:09:50 mainnet POST /v2/contracts/call-read/*/*/* -> mixnet -> api.hiro.so HTTP 200, 63 bytes in 1.1s
+09:09:51 mainnet GET /v2/contracts/interface/*/* -> mixnet -> api.hiro.so HTTP 200, 5446 bytes in 1.2s
+09:09:54 mainnet GET /extended/v3/principals/*/nonces -> mixnet -> api.hiro.so HTTP 200, 111 bytes in 3.0s
+09:10:02 testnet GET /extended/v3/principals/*/nonces -> mixnet -> api.testnet.hiro.so HTTP 200, 111 bytes in 8.1s
+09:10:04 mainnet POST /v2/transactions -> mixnet -> api.hiro.so HTTP 400, 130 bytes in 1.5s
+09:10:12 mainnet GET /v2/info -> mixnet -> api.hiro.so HTTP 200, 1089 bytes in 1.2s
+09:10:13 mainnet POST /v2/contracts/call-read/*/*/* -> mixnet -> api.hiro.so HTTP 200, 63 bytes in 1.2s
+09:10:15 mainnet POST /v2/contracts/call-read/*/*/* -> mixnet -> api.hiro.so HTTP 200, 63 bytes in 1.1s
+09:10:16 mainnet GET /v2/contracts/interface/*/* -> mixnet -> api.hiro.so HTTP 200, 5446 bytes in 1.1s
+09:10:17 mainnet GET /extended/v3/principals/*/nonces -> mixnet -> api.hiro.so HTTP 200, 111 bytes in 1.4s
+09:10:18 mainnet GET /v2/fees/transfer -> mixnet -> api.hiro.so HTTP 200, 1 bytes in 1.3s
+09:10:20 testnet GET /extended/v3/principals/*/nonces -> mixnet -> api.testnet.hiro.so HTTP 200, 111 bytes in 1.3s
+09:10:23 mainnet POST /v2/transactions -> mixnet -> api.hiro.so HTTP 400, 130 bytes in 2.9s
+09:10:39 mainnet websocket /extended/v1/ws -> mixnet -> api.hiro.so open in 5.1s
+09:11:25 mainnet websocket closed after 51s
+09:11:53 mainnet GET /v2/info -> mixnet -> api.hiro.so HTTP 200, 1089 bytes in 1.1s
+09:11:54 mainnet GET /v2/accounts/* -> mixnet -> api.hiro.so HTTP 200, 125 bytes in 1.2s
+09:11:55 mainnet GET /extended/v3/principals/*/nonces -> mixnet -> api.hiro.so HTTP 200, 117 bytes in 0.9s
+09:11:56 mainnet GET /extended/v2/mempool/fees -> mixnet -> api.hiro.so HTTP 200, 227 bytes in 1.1s
+09:11:58 mainnet GET /v2/info -> mixnet -> api.hiro.so HTTP 200, 1089 bytes in 1.3s
+09:11:59 mainnet GET /v2/accounts/* -> mixnet -> api.hiro.so HTTP 200, 125 bytes in 1.5s
+09:12:00 mainnet GET /extended/v3/principals/*/nonces -> mixnet -> api.hiro.so HTTP 200, 117 bytes in 1.0s
+09:12:02 mainnet GET /extended/v2/mempool/fees -> mixnet -> api.hiro.so HTTP 200, 227 bytes in 1.6s
+09:12:05 mainnet GET /v2/info -> mixnet -> api.hiro.so HTTP 200, 1089 bytes in 2.6s
+09:12:06 mainnet GET /v2/accounts/* -> mixnet -> api.hiro.so HTTP 200, 125 bytes in 1.3s
+09:12:07 mainnet GET /extended/v3/principals/*/nonces -> mixnet -> api.hiro.so HTTP 200, 117 bytes in 1.2s
+09:12:08 mainnet GET /extended/v2/mempool/fees -> mixnet -> api.hiro.so HTTP 200, 241 bytes in 1.1s
+09:12:10 mainnet GET /v2/info -> mixnet -> api.hiro.so HTTP 200, 1089 bytes in 1.2s
+09:12:11 mainnet GET /v2/accounts/* -> mixnet -> api.hiro.so HTTP 200, 125 bytes in 1.4s
+09:12:12 mainnet GET /extended/v3/principals/*/nonces -> mixnet -> api.hiro.so HTTP 200, 117 bytes in 1.2s
+09:12:13 mainnet GET /extended/v2/mempool/fees -> mixnet -> api.hiro.so HTTP 200, 241 bytes in 1.2s
+09:12:15 mainnet GET /v2/info -> mixnet -> api.hiro.so HTTP 200, 1089 bytes in 1.1s
+09:12:16 mainnet GET /v2/accounts/* -> mixnet -> api.hiro.so HTTP 200, 125 bytes in 1.5s
+09:12:17 mainnet GET /extended/v3/principals/*/nonces -> mixnet -> api.hiro.so HTTP 200, 117 bytes in 1.4s
+09:12:19 mainnet GET /extended/v2/mempool/fees -> mixnet -> api.hiro.so HTTP 200, 241 bytes in 1.1s

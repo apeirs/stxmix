@@ -1,0 +1,15 @@
+# 2026-11-07T08:12:39Z
+$ stxmix networks
+NETWORK  NETWORK ID  ADDRESSES  GATEWAY PATH  UPSTREAMS (in order)
+mainnet  1           SP SM      /mainnet      https://api.hiro.so https://api.mainnet.hiro.so https://stacks-node-api.mainnet.stacks.co
+testnet  2147483648  ST SN      /testnet      https://api.testnet.hiro.so
+
+$ stxmix nym status
+id                 stxmix
+pid                533986
+socks5             127.0.0.1:1087
+provider           C7Wx2Yiug1gCpfRLd6WYonHLT4dXx3nztiQ97qDPcPR7.AkgxEtBLgLYqwJHzHrSUasa93pTWZVPRyDtiFVncM6Xc@2EJk2oBtjq7Qik5V9Yxs8RXnBU9BhRLLj3biLCXksRWA
+anonymous_replies  true
+client_address     2KSWggmLXSwcFi4bRyqDR5NbKrTqFhfKSnsaNYsKyFou.E89Xf18rcF2V7m8VoR7zWiVy2Nog1bJbL16dzB9nTeA3@5wF5wN7T2UuSsiUcQyL77NwdnXwAXxFttpZ1dR1nu4kR
+gateway            5wF5wN7T2UuSsiUcQyL77NwdnXwAXxFttpZ1dR1nu4kR
+log                ~/.local/state/stxmix/stxmix.log

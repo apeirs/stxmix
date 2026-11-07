@@ -1,0 +1,9 @@
+# 2026-11-07T08:02:01Z over the real Nym mainnet mixnet (exit node 2439, CL)
+$ stxmix ip -v
+[   6.10s] dns  api.ipify.org -> [172.67.74.152 104.26.13.205 104.26.12.205] (DoH via 1.1.1.1, over the mixnet, 6.10s)
+[   6.10s] dial api.ipify.org:443 -> socks5 127.0.0.1:1087 -> mixnet -> exit -> 104.26.13.205:443
+[   6.10s] open api.ipify.org:443 socks5 CONNECT accepted by the local mixnet client in 0.00s
+https://api.ipify.org sees this request coming from 38.7.216.253 (8.54s over the mixnet)
+= Nym node 2439 (CL, exit gateway: true) in the nym-api node list
+(wall time 8.8 s, exit 0)
+

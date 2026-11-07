@@ -1,0 +1,25 @@
+# 2026-11-07T08:02:10Z over the real Nym mainnet mixnet
+$ stxmix info
+mainnet (network id 1): Stacks block 9434168, Bitcoin block 974905, tenure 261700 at 2026-11-07T08:02:09Z, 11s old
+  tip bff3d5befcc7b321635cf571f1b7472f01cbea1146f51cd77008c6712af9ee27, stacks-node 4.0.4 (10474cd, release build, linux [x86_64]) (via api.hiro.so over the mixnet)
+(wall time 9.9 s, exit 0)
+
+$ stxmix info --network testnet
+testnet (network id 2147483648): Stacks block 950230, Bitcoin block 35838, tenure 34730 at 2026-11-07T08:02:26Z, 5s old
+  tip 1d60583c0526d6b46aa8e7b85030a0db8d2cd4bc106ef11c4e02cf86fd859c40, stacks-node 4.0.1 (62e03cc, release build, linux [x86_64]) (via api.testnet.hiro.so over the mixnet)
+(wall time 10.4 s, exit 0)
+
+$ stxmix info --json
+{
+  "block_time": "2026-11-07T08:02:16Z",
+  "burn_block_height": 974905,
+  "network": "mainnet",
+  "network_id": 1,
+  "server_version": "stacks-node 4.0.4 (10474cd, release build, linux [x86_64])",
+  "stacks_tip": "d970354a969854f6fdfb47c4a84ae2760706815614308bee5e28420c86717b56",
+  "stacks_tip_height": 9434169,
+  "tenure_height": 261700,
+  "upstream": "https://api.hiro.so"
+}
+(wall time 22.6 s, exit 0)
+

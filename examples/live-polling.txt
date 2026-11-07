@@ -1,0 +1,21 @@
+# 2026-11-07T08:11:52Z wallet-style polling through stxmix serve: /v2/info, an account, its nonces and the mempool fee estimate, 5 rounds
+round 1 GET /v2/info -> HTTP 200 in 1.1 s
+round 1 GET /v2/accounts/SM3VDXK3WZZSA84XXFKAFAF15NNZX32CTSG82JFQ4?proof=0 -> HTTP 200 in 1.2 s
+round 1 GET /extended/v3/principals/SM3VDXK3WZZSA84XXFKAFAF15NNZX32CTSG82JFQ4/nonces -> HTTP 200 in 0.9 s
+round 1 GET /extended/v2/mempool/fees -> HTTP 200 in 1.1 s
+round 2 GET /v2/info -> HTTP 200 in 1.3 s
+round 2 GET /v2/accounts/SM3VDXK3WZZSA84XXFKAFAF15NNZX32CTSG82JFQ4?proof=0 -> HTTP 200 in 1.5 s
+round 2 GET /extended/v3/principals/SM3VDXK3WZZSA84XXFKAFAF15NNZX32CTSG82JFQ4/nonces -> HTTP 200 in 1.0 s
+round 2 GET /extended/v2/mempool/fees -> HTTP 200 in 1.7 s
+round 3 GET /v2/info -> HTTP 200 in 2.6 s
+round 3 GET /v2/accounts/SM3VDXK3WZZSA84XXFKAFAF15NNZX32CTSG82JFQ4?proof=0 -> HTTP 200 in 1.4 s
+round 3 GET /extended/v3/principals/SM3VDXK3WZZSA84XXFKAFAF15NNZX32CTSG82JFQ4/nonces -> HTTP 200 in 1.2 s
+round 3 GET /extended/v2/mempool/fees -> HTTP 200 in 1.1 s
+round 4 GET /v2/info -> HTTP 200 in 1.3 s
+round 4 GET /v2/accounts/SM3VDXK3WZZSA84XXFKAFAF15NNZX32CTSG82JFQ4?proof=0 -> HTTP 200 in 1.4 s
+round 4 GET /extended/v3/principals/SM3VDXK3WZZSA84XXFKAFAF15NNZX32CTSG82JFQ4/nonces -> HTTP 200 in 1.2 s
+round 4 GET /extended/v2/mempool/fees -> HTTP 200 in 1.2 s
+round 5 GET /v2/info -> HTTP 200 in 1.1 s
+round 5 GET /v2/accounts/SM3VDXK3WZZSA84XXFKAFAF15NNZX32CTSG82JFQ4?proof=0 -> HTTP 200 in 1.5 s
+round 5 GET /extended/v3/principals/SM3VDXK3WZZSA84XXFKAFAF15NNZX32CTSG82JFQ4/nonces -> HTTP 200 in 1.4 s
+round 5 GET /extended/v2/mempool/fees -> HTTP 200 in 1.1 s
