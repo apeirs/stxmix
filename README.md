@@ -56,7 +56,11 @@ Put the base URL into your client:
   `fetchNonce` and `broadcastTransaction` all went through the gateway (`examples/stacksjs-client.mjs`).
   **One catch:** `fetchFeeEstimateTransfer({ transaction: <byte count>, network })` ignores `network` and calls
   `https://api.mainnet.hiro.so` directly, over the clearnet. I saw it happen in my live run: that request never
-  reached the gateway. Pass `client: { baseUrl }` as well and it stays on the mixnet. Watch the gateway log when you
+  reached the gateway. Pass `client: { baseUrl }` as well and it stays on the mixnet. A second path is worse: when
+  `/v2/fees/transaction` has no estimate, the builders (`makeSTXTokenTransfer`, `makeContractCall`, ...) fall back
+  to that same function *without* your `client`, so the request goes to Hiro directly even if you passed one.
+  Set `fee` yourself in the builder options to skip estimation. Reported as
+  [stx-labs/stacks.js#1891](https://github.com/stx-labs/stacks.js/issues/1891). Watch the gateway log when you
   wire up a new app: any request that doesn't show up there did not go through Nym.
 - **curl** (tested): `curl http://127.0.0.1:3999/v2/info`,
   `curl http://127.0.0.1:3999/extended/v1/address/SP.../balances`.
